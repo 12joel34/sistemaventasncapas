@@ -1,4 +1,4 @@
-﻿namespace SistemasVentas.BBS
+﻿namespace SistemasVentas.BSS
 {
     public class Class1
     {
