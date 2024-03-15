@@ -52,6 +52,7 @@
             Controls.Add(dataGridView1);
             Name = "VentaListarVista";
             Text = "VentaListarVista";
+            Load += VentaListarVista_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }

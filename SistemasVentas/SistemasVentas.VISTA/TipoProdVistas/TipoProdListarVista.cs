@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemasVentas.BSS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace SistemasVentas.VISTA.TipoProdVistas
         public TipoProdListarVista()
         {
             InitializeComponent();
+        }
+        TipoProdBss bss = new TipoProdBss();
+        private void TipoProdListarVista_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = bss.ListarTipoProdBss();
         }
     }
 }

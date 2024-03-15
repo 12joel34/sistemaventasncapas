@@ -52,6 +52,7 @@
             Controls.Add(dataGridView1);
             Name = "MarcaListarVista";
             Text = "MarcaListarVista";
+            Load += MarcaListarVista_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }

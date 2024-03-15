@@ -23,7 +23,7 @@ namespace SistemasVentas.VISTA.PersonaVistas
         private void button1_Click(object sender, EventArgs e)
         {
             Persona p = new Persona();
-            p.Nombre=textBox1.Text;
+            p.Nombre = textBox1.Text;
             p.Apellido = textBox2.Text;
             p.Telefono = textBox3.Text;
             p.Ci = textBox4.Text;

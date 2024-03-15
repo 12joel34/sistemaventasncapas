@@ -20,7 +20,7 @@ namespace SistemasVentas.VISTA.DetelleVentaVistas
         DetalleVentaBss bss = new DetalleVentaBss();
         private void DetalleVentaListarVista_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = bss.ListarDetalleVentaBss;
+            dataGridView1.DataSource = bss.ListarDetalleVentaBss();
         }
     }
 }

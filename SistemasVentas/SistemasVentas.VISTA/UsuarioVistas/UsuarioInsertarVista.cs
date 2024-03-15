@@ -20,10 +20,10 @@ namespace SistemasVentas.VISTA.UsuarioVistas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            PersonaListarVista fr=new PersonaListarVista();
-            if (fr.ShowDialog() == DialogResult.OK ) 
-            { 
-                
+            PersonaListarVista fr = new PersonaListarVista();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+
             }
         }
     }

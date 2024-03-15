@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemasVentas.BSS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace SistemasVentas.VISTA.UsuarioRolVistas
         public UsuarioRolListarVista()
         {
             InitializeComponent();
+        }
+        UsuarioRolBss bss = new UsuarioRolBss();
+        private void UsuarioRolListarVista_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = bss.ListarUsuarioRolBss();
         }
     }
 }

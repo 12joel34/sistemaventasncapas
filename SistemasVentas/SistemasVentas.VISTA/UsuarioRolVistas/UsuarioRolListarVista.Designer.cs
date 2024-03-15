@@ -52,6 +52,7 @@
             Controls.Add(dataGridView1);
             Name = "UsuarioRolListarVista";
             Text = "UsuarioRolListarVista";
+            Load += UsuarioRolListarVista_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }

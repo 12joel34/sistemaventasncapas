@@ -52,6 +52,7 @@
             Controls.Add(dataGridView1);
             Name = "TipoProdListarVista";
             Text = "TipoProdListarVista";
+            Load += TipoProdListarVista_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }

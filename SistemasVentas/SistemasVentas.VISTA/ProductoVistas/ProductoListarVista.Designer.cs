@@ -52,6 +52,7 @@
             Controls.Add(dataGridView1);
             Name = "ProductoListarVista";
             Text = "ProductoListarVista";
+            Load += ProductoListarVista_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }

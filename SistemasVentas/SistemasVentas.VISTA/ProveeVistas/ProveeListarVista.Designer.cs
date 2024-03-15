@@ -52,6 +52,7 @@
             Controls.Add(dataGridView1);
             Name = "ProveeListarVista";
             Text = "ProveeListarVista";
+            Load += ProveeListarVista_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }

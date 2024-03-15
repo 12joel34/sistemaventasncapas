@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemasVentas.BSS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace SistemasVentas.VISTA.IngresoVistas
         public IngresoListarVista()
         {
             InitializeComponent();
+        }
+        IngresoBss bss=new IngresoBss();
+        private void IngresoListarVista_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = bss.ListarIngresoBss();
         }
     }
 }
