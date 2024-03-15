@@ -1,6 +1,6 @@
-﻿namespace SistemasVentas.VISTA.PersonaVistas
+﻿namespace SistemasVentas.VISTA.UsuarioRolVistas
 {
-    partial class PersonaListarVista
+    partial class UsuarioRolListarVista
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
-            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -42,28 +41,17 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(581, 378);
+            dataGridView1.Size = new Size(623, 426);
             dataGridView1.TabIndex = 0;
             // 
-            // button1
-            // 
-            button1.Location = new Point(418, 415);
-            button1.Name = "button1";
-            button1.Size = new Size(119, 23);
-            button1.TabIndex = 1;
-            button1.Text = "SELECCIONAR";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // PersonaListarVista
+            // UsuarioRolListarVista
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(606, 450);
-            Controls.Add(button1);
+            ClientSize = new Size(647, 450);
             Controls.Add(dataGridView1);
-            Name = "PersonaListarVista";
-            Text = "PersonaListarVista";
-            Load += PersonaListarVista_Load;
+            Name = "UsuarioRolListarVista";
+            Text = "UsuarioRolListarVista";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
@@ -71,6 +59,5 @@
         #endregion
 
         private DataGridView dataGridView1;
-        private Button button1;
     }
 }
