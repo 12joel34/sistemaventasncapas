@@ -42,17 +42,20 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(581, 378);
             dataGridView1.TabIndex = 0;
             // 
             // button1
             // 
+            button1.DialogResult = DialogResult.OK;
             button1.Location = new Point(418, 415);
             button1.Name = "button1";
             button1.Size = new Size(119, 23);
             button1.TabIndex = 1;
             button1.Text = "SELECCIONAR";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // PersonaListarVista
             // 

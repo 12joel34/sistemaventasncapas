@@ -44,7 +44,7 @@
             // button1
             // 
             button1.DialogResult = DialogResult.OK;
-            button1.Location = new Point(524, 56);
+            button1.Location = new Point(486, 57);
             button1.Name = "button1";
             button1.Size = new Size(143, 23);
             button1.TabIndex = 0;
@@ -81,7 +81,7 @@
             // 
             textBox2.Location = new Point(275, 106);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(257, 23);
+            textBox2.Size = new Size(354, 23);
             textBox2.TabIndex = 2;
             // 
             // label3
@@ -97,8 +97,10 @@
             // 
             textBox3.Location = new Point(275, 157);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(257, 23);
+            textBox3.PasswordChar = '*';
+            textBox3.Size = new Size(354, 23);
             textBox3.TabIndex = 2;
+            textBox3.UseSystemPasswordChar = true;
             // 
             // label4
             // 
@@ -113,7 +115,7 @@
             // 
             dateTimePicker1.Location = new Point(275, 210);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(257, 23);
+            dateTimePicker1.Size = new Size(354, 23);
             dateTimePicker1.TabIndex = 3;
             // 
             // button2
