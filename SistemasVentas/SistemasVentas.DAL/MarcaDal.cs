@@ -16,5 +16,11 @@ namespace SistemasVentas.DAL
             DataTable lista = conexion.EjecutarDataTabla(consulta, "tabla");
             return lista;
         }
+        public void InsertarMarcaDal(Marca marca)
+        {
+            string consulta = "insert into marca values('" + marca.Nombre + "'," +
+                                                          "'Activo')";
+            conexion.Ejecutar(consulta);
+        }
     }
 }

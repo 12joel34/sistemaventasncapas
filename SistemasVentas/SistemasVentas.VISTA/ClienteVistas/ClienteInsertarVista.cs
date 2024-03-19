@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemasVentas.BSS;
+using SistemasVentas.Modelos;
 
 namespace SistemasVentas.VISTA.ClienteVistas
 {
@@ -15,6 +17,17 @@ namespace SistemasVentas.VISTA.ClienteVistas
         public ClienteInsertarVista()
         {
             InitializeComponent();
+        }
+        ClienteBss bss=new ClienteBss();
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Cliente c = new Cliente();
+            c.IdPersona=Convert.ToInt32(textBox1.Text);
+            c.TipoCliente = textBox2.Text;
+            c.CodigoCliente = textBox3.text;
+
+            bss.InsertarClienteBss(c);
+            MessageBox.Show("Se guardp correctamente su cliente");
         }
     }
 }

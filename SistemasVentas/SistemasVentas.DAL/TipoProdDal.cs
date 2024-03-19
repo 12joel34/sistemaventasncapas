@@ -16,5 +16,11 @@ namespace SistemasVentas.DAL
             DataTable lista = conexion.EjecutarDataTabla(consulta, "tabla");
             return lista;
         }
+        public void InsertarTipoProdDal(TipoProd tipoProd)
+        {
+            string consulta = "insert into tipoProd values('" + tipoProd.Nombre + "'," +
+                                                          "'Activo')";
+            conexion.Ejecutar(consulta);
+        }
     }
 }

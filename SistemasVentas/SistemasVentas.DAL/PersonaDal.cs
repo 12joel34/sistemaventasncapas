@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using System.Data;
 using SistemasVentas.Modelos;
 
-
 namespace SistemasVentas.DAL
 {
     public class PersonaDal
@@ -45,6 +44,21 @@ namespace SistemasVentas.DAL
                 p.Estado = tabla.Rows[0]["estado"].ToString();
             }
             return p;
+        }
+        public void EditarPersonaDal(Persona p)
+        {
+            string consulta = "update persona set nombre='" + p.Nombre + "'," +
+                                                "apellido='" + p.Apellido + "'," +
+                                                "telefono='" + p.Telefono + "'," +
+                                                "ci='" + p.Ci + "'," +
+                                                "correo='" + p.Correo + "' " +
+                                                "where idpersona=" + p.IdPersona;
+            conexion.Ejecutar(consulta);
+        }
+        public void EliminarPersonaDal(int id)
+        {
+            string consulta = "delete from persona where idpersona=" + id;
+            conexion.Ejecutar(consulta);
         }
     }
 }

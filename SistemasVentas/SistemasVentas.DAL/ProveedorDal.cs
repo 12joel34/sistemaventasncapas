@@ -16,5 +16,13 @@ namespace SistemasVentas.DAL
             DataTable lista = conexion.EjecutarDataTabla(consulta, "tabla");
             return lista;
         }
+        public void InsertarProveedorDal(Proveedor proveedor)
+        {
+            string consulta = "insert into proveedor values('" + proveedor.Nombre + "'," +
+                                                          "'" + proveedor.Telefono + "'," +
+                                                          "'" + proveedor.Direccion + "'," +
+                                                          "'Activo')";
+            conexion.Ejecutar(consulta);
+        }
     }
 }

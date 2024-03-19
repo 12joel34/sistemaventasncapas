@@ -16,5 +16,13 @@ namespace SistemasVentas.DAL
             DataTable lista = conexion.EjecutarDataTabla(consulta, "tabla");
             return lista;
         }
+        public void InsertarIngresoDal(Ingreso ingreso)
+        {
+            string consulta = "insert into ingreso values(" + ingreso.IdProveedor + "," +
+                                                          "'" + ingreso.FechaIngreso + "'," +
+                                                          "" + ingreso.Total + "," +
+                                                          "'Activo')";
+            conexion.Ejecutar(consulta);
+        }
     }
 }

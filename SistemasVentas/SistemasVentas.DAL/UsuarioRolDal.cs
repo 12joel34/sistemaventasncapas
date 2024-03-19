@@ -16,5 +16,13 @@ namespace SistemasVentas.DAL
             DataTable lista = conexion.EjecutarDataTabla(consulta, "tabla");
             return lista;
         }
+        public void InsertarUsuarioRolDal(UsuarioRol usuarioRol)
+        {
+            string consulta = "insert into usuarioRol values(" + usuarioRol.IdUsuario + "," +
+                                                          "" + usuarioRol.IdRol + "," +
+                                                          "'" + usuarioRol.FechaAsigna + "'," +
+                                                          "'Activo')";
+            conexion.Ejecutar(consulta);
+        }
     }
 }
