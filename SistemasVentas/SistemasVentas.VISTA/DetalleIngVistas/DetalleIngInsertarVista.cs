@@ -9,7 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using SistemasVentas.VISTA.IngresoVistas;
+using SistemasVentas.VISTA.ProductoVistas;
 
 namespace SistemasVentas.VISTA.DetalleIngVistas
 {
@@ -19,20 +20,44 @@ namespace SistemasVentas.VISTA.DetalleIngVistas
         {
             InitializeComponent();
         }
-        DetalleIngBss mss = new DetalleIngBss();
+        DetalleIngBss bss = new DetalleIngBss();
         private void button1_Click(object sender, EventArgs e)
         {
             DetalleIng d = new DetalleIng();
-            d.IdIngreso = Convert.ToInt32(textBox1.Text);
-            d.IdProducto = Convert.ToInt32(textBox2.Text);
+            d.IdIngreso = IdIngresoSeleccionado;
+            d.IdProducto = IdProductoSeleccionado;
             d.FechaVenc = dateTimePicker1.Value;
-            d.Cantidad = Convert.ToInt32(textBox3.Text);
-            d.PrecioCosto = Convert.ToDecimal(textBox4.Text);
-            d.PrecioVenta = Convert.ToDecimal(textBox5.Text);
-            d.SubTotal = Convert.ToDecimal(textBox6.Text);
+            d.Cantidad = Convert.ToInt32(textBox1.Text);
+            d.PrecioCosto = Convert.ToDecimal(textBox2.Text);
+            d.PrecioVenta = Convert.ToDecimal(textBox3.Text);
+            d.SubTotal = Convert.ToDecimal(textBox4.Text);
 
             bss.InsertarDetalleIngBss(d);
-            MessageBox.Show("Se guardp correctamente el detalle  ingreso");
+            MessageBox.Show("Se guardo correctamente el detalle  ingreso");
+        }
+
+        public static int IdIngresoSeleccionado = 0;
+        IngresoBss bssidingreso = new IngresoBss();
+        private void button3_Click(object sender, EventArgs e)
+        {
+            IngresoListarVista fr = new IngresoListarVista();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                Ingreso ingreso = bssidingreso.ObtenerIngresoIdBss(IdIngresoSeleccionado);
+                textBox6.Text = Convert.ToString(ingreso.IdIngreso);
+            }
+        }
+
+        public static int IdProductoSeleccionado = 0;
+        ProductoBss bssidproducto = new ProductoBss();
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ProductoListarVista fr = new ProductoListarVista();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                Producto producto = bssidproducto.ObtenerProductoIdBss(IdProductoSeleccionado);
+                textBox5.Text = producto.Nombre;
+            }
         }
     }
 }

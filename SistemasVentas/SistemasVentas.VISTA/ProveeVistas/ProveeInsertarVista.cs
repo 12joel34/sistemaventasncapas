@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SistemasVentas.Modelos;
+using SistemasVentas.BSS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using SistemasVentas.VISTA.ProductoVistas;
+using SistemasVentas.VISTA.ProveedorVistas;
 
 namespace SistemasVentas.VISTA.ProveeVistas
 {
@@ -15,6 +20,39 @@ namespace SistemasVentas.VISTA.ProveeVistas
         public ProveeInsertarVista()
         {
             InitializeComponent();
+        }
+        ProveeBss bss = new ProveeBss();
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Provee p = new Provee();
+            p.IdProducto = IdProductoSeleccionada;
+            p.IdProveedor = IdProveedorSeleccionada;
+            p.Fecha = dateTimePicker1.Value;
+            p.Precio = Convert.ToDecimal(textBox2.Text);
+            bss.InsertarProveeBss(p);
+            MessageBox.Show("Se guardó correctamente a Provee");
+        }
+        public static int IdProductoSeleccionada = 0;
+        ProductoBss bsspro = new ProductoBss();
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ProductoListarVista fr = new ProductoListarVista();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                Producto producto = bsspro.ObtenerProductoIdBss(IdProductoSeleccionada);
+                textBox1.Text = producto.Nombre;
+            }
+        }
+        public static int IdProveedorSeleccionada = 0;
+        ProveedorBss bssproveedor = new ProveedorBss();
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ProveedorListarVista fr = new ProveedorListarVista();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                Proveedor proveedor = bssproveedor.ObtenerProveedorIdBss(IdProveedorSeleccionada);
+                textBox3.Text = proveedor.Nombre;
+            }
         }
     }
 }

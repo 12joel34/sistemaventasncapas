@@ -34,6 +34,9 @@
             textBox2 = new TextBox();
             button1 = new Button();
             button2 = new Button();
+            button3 = new Button();
+            label3 = new Label();
+            textBox3 = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -70,7 +73,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(175, 267);
+            button1.Location = new Point(132, 267);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 2;
@@ -87,11 +90,40 @@
             button2.Text = "CANCELAR";
             button2.UseVisualStyleBackColor = true;
             // 
+            // button3
+            // 
+            button3.Location = new Point(403, 48);
+            button3.Name = "button3";
+            button3.Size = new Size(75, 23);
+            button3.TabIndex = 4;
+            button3.Text = "LISTAR";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(46, 48);
+            label3.Name = "label3";
+            label3.Size = new Size(161, 15);
+            label3.TabIndex = 5;
+            label3.Text = "ID PERSONA SELECCIONADA";
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(249, 48);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(131, 23);
+            textBox3.TabIndex = 6;
+            // 
             // ClienteInsertarVista
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(499, 331);
+            Controls.Add(textBox3);
+            Controls.Add(label3);
+            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(textBox2);
@@ -112,5 +144,8 @@
         private TextBox textBox2;
         private Button button1;
         private Button button2;
+        private Button button3;
+        private Label label3;
+        private TextBox textBox3;
     }
 }

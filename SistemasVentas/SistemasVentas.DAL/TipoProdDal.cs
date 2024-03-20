@@ -18,8 +18,33 @@ namespace SistemasVentas.DAL
         }
         public void InsertarTipoProdDal(TipoProd tipoProd)
         {
-            string consulta = "insert into tipoProd values('" + tipoProd.Nombre + "'," +
-                                                          "'Activo')";
+            string consulta = "insert into tipoProd values('" + tipoProd.Nombre + "'," + "','"
+                                                        + tipoProd.Estado + "')";
+            conexion.Ejecutar(consulta);
+        }
+        TipoProd p = new TipoProd();
+        public TipoProd ObtenerTipoProdIdDal(int id)
+        {
+            string consulta = "select * from tipoprod where idtipoprod=" + id;
+            DataTable tabla = conexion.EjecutarDataTabla(consulta, "asdas");
+            if (tabla.Rows.Count > 0)
+            {
+                p.IdTipoProd = Convert.ToInt32(tabla.Rows[0]["idtipoprod"]);
+                p.Nombre = tabla.Rows[0]["nombre"].ToString();
+                p.Estado = tabla.Rows[0]["estado"].ToString();
+            }
+            return p;
+        }
+        public void EditarTipoProdDal(TipoProd p)
+        {
+            string consulta = "update tipoprod set nombre='" + p.Nombre + "'," +
+                                                        "estado='" + p.Estado + "' " +
+                                                "where idtipoprod=" + p.IdTipoProd;
+            conexion.Ejecutar(consulta);
+        }
+        public void EliminarTipoProdDal(int id)
+        {
+            string consulta = "delete from tipoprod where idtipoprod=" + id;
             conexion.Ejecutar(consulta);
         }
     }

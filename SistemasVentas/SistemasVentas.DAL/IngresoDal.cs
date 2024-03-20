@@ -24,5 +24,19 @@ namespace SistemasVentas.DAL
                                                           "'Activo')";
             conexion.Ejecutar(consulta);
         }
+        Ingreso pe = new Ingreso();
+        public Ingreso ObtenerIngresoId(int id)
+        {
+            string consulta = "select * from ingreso where idingreso=" + id;
+            DataTable tabla = conexion.EjecutarDataTabla(consulta, "asdas");
+            if (tabla.Rows.Count>0)
+            {
+                pe.IdIngreso = Convert.ToInt32(tabla.Rows[0]["idingreso"]);
+                pe.IdProveedor = Convert.ToInt32(tabla.Rows[0]["idproveedor"]);
+                pe.FechaIngreso = Convert.ToDateTime(tabla.Rows[0]["fechaingreso"]);
+                pe.Total = Convert.ToDecimal(tabla.Rows[0]["total"]);
+            }
+            return pe;
+        }
     }
 }

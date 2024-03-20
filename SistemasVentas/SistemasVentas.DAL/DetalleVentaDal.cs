@@ -26,5 +26,21 @@ namespace SistemasVentas.DAL
                                                           "'Activo')";
             conexion.Ejecutar(consulta);
         }
+        public DetalleVenta ObtenerVentaId(int id)
+        {
+            string consulta = "select * from detalleventa where iddetalleventa=" + id;
+            DataTable tabla = conexion.EjecutarDataTabla(consulta, "asdas");
+            DetalleVenta deve = new DetalleVenta();
+            if (tabla.Rows.Count > 0)
+            {
+                deve.IdDetalleVenta = Convert.ToInt32(tabla.Rows[0]["idDetalleVenta"]);
+                deve.IdVenta = Convert.ToInt32(tabla.Rows[0]["idVenta"]);
+                deve.IdProducto = Convert.ToInt32(tabla.Rows[0]["idProducto"]);
+                deve.Cantidad = Convert.ToInt32(tabla.Rows[0]["cantidad"]);
+                deve.PrecioVenta = Convert.ToDecimal(tabla.Rows[0]["precioVenta"].ToString());
+                deve.SubTotal = Convert.ToDecimal(tabla.Rows[0]["subTotal"].ToString());
+            }
+            return deve;
+        }
     }
 }

@@ -32,12 +32,14 @@
             textBox1 = new TextBox();
             button1 = new Button();
             button2 = new Button();
+            label2 = new Label();
+            textBox2 = new TextBox();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(174, 141);
+            label1.Location = new Point(152, 130);
             label1.Name = "label1";
             label1.Size = new Size(56, 15);
             label1.TabIndex = 0;
@@ -45,34 +47,53 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(288, 138);
+            textBox1.Location = new Point(214, 127);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
+            textBox1.Size = new Size(149, 23);
             textBox1.TabIndex = 1;
             // 
             // button1
             // 
-            button1.Location = new Point(138, 253);
+            button1.Location = new Point(124, 242);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 2;
             button1.Text = "GUARDAR";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
-            button2.Location = new Point(322, 253);
+            button2.Location = new Point(308, 242);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 3;
             button2.Text = "CANCELAR";
             button2.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(159, 180);
+            label2.Name = "label2";
+            label2.Size = new Size(49, 15);
+            label2.TabIndex = 4;
+            label2.Text = "ESTADO";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(214, 172);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(149, 23);
+            textBox2.TabIndex = 5;
+            // 
             // MarcaInsertarVista
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(558, 404);
+            ClientSize = new Size(537, 404);
+            Controls.Add(textBox2);
+            Controls.Add(label2);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(textBox1);
@@ -89,5 +110,7 @@
         private TextBox textBox1;
         private Button button1;
         private Button button2;
+        private Label label2;
+        private TextBox textBox2;
     }
 }
