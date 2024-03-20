@@ -1,4 +1,5 @@
 ﻿using SistemasVentas.BSS;
+using SistemasVentas.VISTA.ProveedorVistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,5 +23,15 @@ namespace SistemasVentas.VISTA.ProveeVistas
         {
             dataGridView1.DataSource = bss.ListarProveeBss();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ProveeInsertarVista fr = new ProveeInsertarVista();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                dataGridView1.DataSource = bss.ListarProveeBss();
+            }
+        }
+    }
     }
 }

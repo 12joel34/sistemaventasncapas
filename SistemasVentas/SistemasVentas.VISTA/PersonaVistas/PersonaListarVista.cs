@@ -52,7 +52,7 @@ namespace SistemasVentas.VISTA.PersonaVistas
         private void button4_Click(object sender, EventArgs e)
         {
             int IdPersonaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            DialogResult result = MessageBox.Show("Esta seguro de eliminar esta persona","Eliminando", MessageBoxButtons.YesNo);  
+            DialogResult result = MessageBox.Show("Esta seguro de eliminar esta persona", "Eliminando", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 bss.EliminarPersonaBss(IdPersonaSeleccionada);

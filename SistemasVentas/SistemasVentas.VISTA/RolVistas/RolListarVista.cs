@@ -1,4 +1,5 @@
 ﻿using SistemasVentas.BSS;
+using SistemasVentas.VISTA.ProveedorVistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,24 @@ namespace SistemasVentas.VISTA.RolVistas
         private void RolListarVista_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = bss.ListarRolBss();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            RolInsertarVista fr = new RolInsertarVista();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                dataGridView1.DataSource = bss.ListarRolBss();
+            }
+        }
+    }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
         }
     }
 }

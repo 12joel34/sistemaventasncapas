@@ -52,7 +52,7 @@
             // button1
             // 
             button1.DialogResult = DialogResult.OK;
-            button1.Location = new Point(474, 396);
+            button1.Location = new Point(475, 400);
             button1.Name = "button1";
             button1.Size = new Size(119, 23);
             button1.TabIndex = 1;
@@ -62,7 +62,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(12, 396);
+            button2.Location = new Point(14, 400);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 2;
@@ -72,7 +72,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(93, 396);
+            button3.Location = new Point(95, 400);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 2;
@@ -82,7 +82,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(174, 396);
+            button4.Location = new Point(176, 400);
             button4.Name = "button4";
             button4.Size = new Size(75, 23);
             button4.TabIndex = 2;

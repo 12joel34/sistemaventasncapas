@@ -22,7 +22,7 @@ namespace SistemasVentas.BSS
         }
         public Ingreso ObtenerIngresoIdBss(int id)
         {
-            return dal.ObtenerIngresoIdDal(id);
+            return dal.ObtenerIngresoId(id);
         }
         public void EditarIngresoBss(Ingreso ingreso)
         {

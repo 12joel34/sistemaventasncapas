@@ -22,5 +22,10 @@ namespace SistemasVentas.VISTA.MarcaVistas
         {
             dataGridView1.DataSource = bss.ListarMarcaBss();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

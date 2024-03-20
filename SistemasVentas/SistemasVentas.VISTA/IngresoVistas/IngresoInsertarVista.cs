@@ -24,7 +24,7 @@ namespace SistemasVentas.VISTA.IngresoVistas
         private void button1_Click(object sender, EventArgs e)
         {
             Ingreso p = new Ingreso();
-            p.IdProveedor = IdProveedorSeleccionado;
+            p.IdProveedor = IdProveedorSeleccionada;
             p.FechaIngreso = dateTimePicker1.Value;
             p.Total = Convert.ToDecimal(textBox2.Text);
 

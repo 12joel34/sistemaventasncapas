@@ -39,7 +39,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(138, 106);
+            label1.Location = new Point(63, 54);
             label1.Name = "label1";
             label1.Size = new Size(56, 15);
             label1.TabIndex = 0;
@@ -47,7 +47,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(112, 254);
+            button1.Location = new Point(37, 202);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 1;
@@ -57,7 +57,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(345, 254);
+            button2.Location = new Point(270, 202);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 2;
@@ -66,7 +66,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(209, 103);
+            textBox1.Location = new Point(134, 51);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(199, 23);
             textBox1.TabIndex = 3;
@@ -74,7 +74,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(145, 152);
+            label2.Location = new Point(70, 100);
             label2.Name = "label2";
             label2.Size = new Size(49, 15);
             label2.TabIndex = 4;
@@ -82,7 +82,7 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(209, 149);
+            textBox2.Location = new Point(134, 97);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(199, 23);
             textBox2.TabIndex = 5;
@@ -91,7 +91,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(553, 394);
+            ClientSize = new Size(410, 307);
             Controls.Add(textBox2);
             Controls.Add(label2);
             Controls.Add(textBox1);

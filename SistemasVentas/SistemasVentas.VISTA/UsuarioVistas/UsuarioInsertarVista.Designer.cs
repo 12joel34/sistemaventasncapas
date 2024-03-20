@@ -124,8 +124,10 @@
             // 
             textBox3.Location = new Point(193, 189);
             textBox3.Name = "textBox3";
+            textBox3.PasswordChar = '*';
             textBox3.Size = new Size(303, 23);
             textBox3.TabIndex = 9;
+            textBox3.UseSystemPasswordChar = true;
             // 
             // dateTimePicker1
             // 

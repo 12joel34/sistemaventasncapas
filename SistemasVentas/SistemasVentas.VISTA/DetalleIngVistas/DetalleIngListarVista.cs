@@ -1,4 +1,5 @@
 ﻿using SistemasVentas.BSS;
+using SistemasVentas.VISTA.ClienteVistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,15 @@ namespace SistemasVentas.VISTA.DetalleIngVistas
         private void DetalleIngListarVista_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = bss.ListarDetalleIngBss();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DetalleIngInsertarVista fr = new DetalleIngInsertarVista();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                dataGridView1.DataSource = bss.ListarDetalleIngBss();
+            }
         }
     }
 }

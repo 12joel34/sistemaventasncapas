@@ -1,4 +1,5 @@
 ﻿using SistemasVentas.BSS;
+using SistemasVentas.VISTA.ProveeVistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,15 @@ namespace SistemasVentas.VISTA.UsuarioVistas
         private void UsuarioListarVista_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = bss.ListarUsuarioBss();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            UsuarioInsertarVista fr = new UsuarioInsertarVista();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                dataGridView1.DataSource = bss.ListarUsuarioBss();
+            }
         }
     }
 }
