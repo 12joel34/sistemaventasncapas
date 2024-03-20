@@ -32,6 +32,11 @@ namespace SistemasVentas.VISTA.ProveeVistas
                 dataGridView1.DataSource = bss.ListarProveeBss();
             }
         }
-    }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
