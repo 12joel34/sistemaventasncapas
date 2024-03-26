@@ -32,5 +32,10 @@ namespace SistemasVentas.VISTA.UsuarioVistas
                 dataGridView1.DataSource = bss.ListarUsuarioBss();
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

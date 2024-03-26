@@ -50,6 +50,7 @@
             button4.TabIndex = 23;
             button4.Text = "SELECCIONA VENDEDOR";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button3
             // 

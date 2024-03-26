@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SistemasVentas.VISTA.UsuarioVistas
+namespace SistemasVentas.VISTA.RolVistas
 {
-    public partial class UsuarioEditarVista : Form
+    public partial class RolListarVista : Form
     {
-        public UsuarioEditarVista()
+        public RolListarVista()
         {
             InitializeComponent();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

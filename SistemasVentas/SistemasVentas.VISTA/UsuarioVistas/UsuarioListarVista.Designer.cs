@@ -86,6 +86,7 @@
             button4.TabIndex = 2;
             button4.Text = "ELIMINAR";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // UsuarioListarVista
             // 

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SistemasVentas.VISTA.ClienteVistas
+namespace SistemasVentas.VISTA.UsuarioVistas
 {
-    public partial class ClienteEditarVista : Form
+    public partial class UsuarioInsertarVista : Form
     {
-        public ClienteEditarVista()
+        public UsuarioInsertarVista()
         {
             InitializeComponent();
         }
