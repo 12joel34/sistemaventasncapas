@@ -20,9 +20,9 @@ namespace SistemasVentas.BSS
         {
             dal.InsertarDetalleVentaDal(detalleVenta);
         }
-        public DetalleVenta ObtenerVentaIdBss(int id)
+        public DetalleVenta ObtenerDetalleVentaIdBss(int id)
         {
-            return dal.ObtenerVentaId(id);
+            return dal.ObtenerDetalleVentaIdDal(id);
         }
         public void EditarDetalleVentaBss(DetalleVenta p)
         {

@@ -68,7 +68,7 @@
             // button2
             // 
             button2.DialogResult = DialogResult.Cancel;
-            button2.Location = new Point(311, 284);
+            button2.Location = new Point(300, 237);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 12;
@@ -78,7 +78,7 @@
             // button1
             // 
             button1.DialogResult = DialogResult.OK;
-            button1.Location = new Point(127, 284);
+            button1.Location = new Point(116, 237);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 11;
@@ -122,7 +122,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(499, 376);
+            ClientSize = new Size(490, 304);
             Controls.Add(textBox3);
             Controls.Add(label3);
             Controls.Add(button3);
@@ -134,6 +134,7 @@
             Controls.Add(label1);
             Name = "ClienteEditarVista";
             Text = "ClienteEditarVista";
+            Load += ClienteEditarVista_Load;
             ResumeLayout(false);
             PerformLayout();
         }

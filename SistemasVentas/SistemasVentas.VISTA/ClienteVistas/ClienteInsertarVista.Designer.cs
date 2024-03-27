@@ -132,6 +132,7 @@
             Controls.Add(label1);
             Name = "ClienteInsertarVista";
             Text = "ClienteInsertarVista";
+            Load += ClienteInsertarVista_Load;
             ResumeLayout(false);
             PerformLayout();
         }

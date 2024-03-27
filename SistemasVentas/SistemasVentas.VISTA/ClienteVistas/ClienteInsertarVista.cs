@@ -37,11 +37,16 @@ namespace SistemasVentas.VISTA.ClienteVistas
         private void button3_Click(object sender, EventArgs e)
         {
             PersonaListarVista fr = new PersonaListarVista();
-            if(fr.ShowDialog()==DialogResult.OK)
+            if (fr.ShowDialog() == DialogResult.OK)
             {
                 Persona persona = bsspersel.ObtenerPersonaIdBss(IdPersonaSeleccionada);
-                textBox3.Text = persona.Nombre + " " + persona.Apellido;   
+                textBox3.Text = persona.Nombre + " " + persona.Apellido;
             }
+        }
+
+        private void ClienteInsertarVista_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace SistemasVentas.VISTA.DetelleVentaVistas
+﻿namespace SistemasVentas.VISTA.DetalleVentaVistas
 {
-    partial class DetalleVentaEditarVista
+    partial class DetalleVentaInsertarVista
     {
         /// <summary>
         /// Required designer variable.
@@ -46,32 +46,34 @@
             // 
             // button4
             // 
-            button4.Location = new Point(381, 103);
+            button4.Location = new Point(381, 112);
             button4.Name = "button4";
             button4.Size = new Size(148, 23);
             button4.TabIndex = 24;
             button4.Text = "SELECCIONA PRODUCTO";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
-            button3.Location = new Point(381, 50);
+            button3.Location = new Point(381, 59);
             button3.Name = "button3";
             button3.Size = new Size(148, 23);
             button3.TabIndex = 23;
             button3.Text = "SELECCIONA VENTA";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(229, 104);
+            textBox5.Location = new Point(229, 113);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(146, 23);
             textBox5.TabIndex = 22;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(229, 51);
+            textBox4.Location = new Point(229, 60);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(146, 23);
             textBox4.TabIndex = 21;
@@ -79,7 +81,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(66, 108);
+            label5.Location = new Point(66, 117);
             label5.Name = "label5";
             label5.Size = new Size(157, 15);
             label5.TabIndex = 19;
@@ -88,7 +90,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(93, 54);
+            label4.Location = new Point(93, 63);
             label4.Name = "label4";
             label4.Size = new Size(130, 15);
             label4.TabIndex = 20;
@@ -96,8 +98,7 @@
             // 
             // button2
             // 
-            button2.DialogResult = DialogResult.Cancel;
-            button2.Location = new Point(362, 323);
+            button2.Location = new Point(362, 332);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 18;
@@ -106,31 +107,31 @@
             // 
             // button1
             // 
-            button1.DialogResult = DialogResult.OK;
-            button1.Location = new Point(112, 320);
+            button1.Location = new Point(112, 329);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 17;
             button1.Text = "GUARDAR";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(229, 263);
+            textBox3.Location = new Point(229, 272);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(179, 23);
             textBox3.TabIndex = 14;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(229, 210);
+            textBox2.Location = new Point(229, 219);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(179, 23);
             textBox2.TabIndex = 15;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(229, 157);
+            textBox1.Location = new Point(229, 166);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(179, 23);
             textBox1.TabIndex = 16;
@@ -138,7 +139,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(160, 270);
+            label3.Location = new Point(160, 279);
             label3.Name = "label3";
             label3.Size = new Size(63, 15);
             label3.TabIndex = 13;
@@ -147,7 +148,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(138, 216);
+            label2.Location = new Point(138, 225);
             label2.Name = "label2";
             label2.Size = new Size(85, 15);
             label2.TabIndex = 12;
@@ -156,17 +157,17 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(158, 162);
+            label1.Location = new Point(158, 171);
             label1.Name = "label1";
             label1.Size = new Size(65, 15);
             label1.TabIndex = 11;
             label1.Text = "CANTIDAD";
             // 
-            // DetalleVentaEditarVista
+            // DetalleVentaInsertarVista
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(612, 378);
+            ClientSize = new Size(560, 400);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(textBox5);
@@ -181,8 +182,9 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "DetalleVentaEditarVista";
-            Text = "DetalleVentaEditarVista";
+            Name = "DetalleVentaInsertarVista";
+            Text = "DetalleVentaInsertarVista";
+            Load += DetalleVentaInsertarVista_Load;
             ResumeLayout(false);
             PerformLayout();
         }

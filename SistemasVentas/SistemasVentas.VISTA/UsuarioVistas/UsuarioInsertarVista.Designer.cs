@@ -56,6 +56,7 @@
             textBox3.Size = new Size(303, 23);
             textBox3.TabIndex = 31;
             textBox3.UseSystemPasswordChar = true;
+            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // textBox2
             // 
@@ -156,6 +157,7 @@
             Controls.Add(label1);
             Name = "UsuarioInsertarVista";
             Text = "UsuarioInsertarVista";
+            Load += UsuarioInsertarVista_Load;
             ResumeLayout(false);
             PerformLayout();
         }

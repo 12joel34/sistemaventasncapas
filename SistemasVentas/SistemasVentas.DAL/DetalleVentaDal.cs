@@ -26,7 +26,7 @@ namespace SistemasVentas.DAL
                                                           "'Activo')";
             conexion.Ejecutar(consulta);
         }
-        public DetalleVenta ObtenerVentaId(int id)
+        public DetalleVenta ObtenerDetalleVentaIdDal(int id)
         {
             string consulta = "select * from detalleventa where iddetalleventa=" + id;
             DataTable tabla = conexion.EjecutarDataTabla(consulta, "asdas");

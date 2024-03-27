@@ -46,7 +46,7 @@
             dataGridView1.ReadOnly = true;
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(558, 377);
+            dataGridView1.Size = new Size(558, 364);
             dataGridView1.TabIndex = 0;
             // 
             // button1

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using SistemasVentas.BSS;
+using SistemasVentas.Modelos;
+using SistemasVentas.VISTA.PersonaVistas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,19 +15,42 @@ namespace SistemasVentas.VISTA.ClienteVistas
 {
     public partial class ClienteEditarVista : Form
     {
-        public ClienteEditarVista()
+        int idx = 0;
+        Cliente p = new Cliente();
+        ClienteBss bss = new ClienteBss();
+        public ClienteEditarVista(int id)
         {
+            idx = id;
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            p.IdPersona = IdPersonaSeleccionada;
+            p.TipoCliente = textBox1.Text;
+            p.CodigoCliente = textBox2.Text;
 
+            bss.EditarClienteBss(p);
+            MessageBox.Show("Datos Actualizados");
         }
-
+        public static int IdPersonaSeleccionada = 0;
+        PersonaBss bssper = new PersonaBss();
         private void button3_Click(object sender, EventArgs e)
         {
+            PersonaListarVista fr = new PersonaListarVista();
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                Persona persona = bssper.ObtenerPersonaIdBss(IdPersonaSeleccionada);
+                textBox1.Text = persona.Nombre + " " + persona.Apellido;
+            }
+        }
 
+        private void ClienteEditarVista_Load(object sender, EventArgs e)
+        {
+            p = bss.ObtenerClienteIdBss(idx);
+            textBox3.Text = p.IdPersona.ToString();
+            textBox1.Text = p.TipoCliente;
+            textBox2.Text = p.CodigoCliente;
         }
     }
 }

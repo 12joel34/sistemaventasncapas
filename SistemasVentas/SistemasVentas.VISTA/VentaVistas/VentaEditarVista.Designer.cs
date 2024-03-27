@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button4 = new Button();
             button3 = new Button();
             textBox3 = new TextBox();
             textBox2 = new TextBox();
@@ -40,26 +39,19 @@
             textBox1 = new TextBox();
             label2 = new Label();
             label1 = new Label();
+            button4 = new Button();
             SuspendLayout();
-            // 
-            // button4
-            // 
-            button4.Location = new Point(359, 108);
-            button4.Name = "button4";
-            button4.Size = new Size(159, 23);
-            button4.TabIndex = 23;
-            button4.Text = "SELECCIONA VENDEDOR";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
             // 
             // button3
             // 
+            button3.DialogResult = DialogResult.OK;
             button3.Location = new Point(359, 62);
             button3.Name = "button3";
             button3.Size = new Size(159, 23);
             button3.TabIndex = 22;
             button3.Text = "SELECCIONA CLIENTE";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // textBox3
             // 
@@ -112,6 +104,7 @@
             button1.TabIndex = 16;
             button1.Text = "GUARDAR";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // dateTimePicker1
             // 
@@ -145,6 +138,17 @@
             label1.TabIndex = 12;
             label1.Text = "FECHA";
             // 
+            // button4
+            // 
+            button4.DialogResult = DialogResult.OK;
+            button4.Location = new Point(359, 107);
+            button4.Name = "button4";
+            button4.Size = new Size(159, 23);
+            button4.TabIndex = 23;
+            button4.Text = "SELECCIONA VENDEDOR";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click_1;
+            // 
             // VentaEditarVista
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -164,13 +168,12 @@
             Controls.Add(label1);
             Name = "VentaEditarVista";
             Text = "VentaEditarVista";
+            Load += VentaEditarVista_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Button button4;
         private Button button3;
         private TextBox textBox3;
         private TextBox textBox2;
@@ -182,5 +185,6 @@
         private TextBox textBox1;
         private Label label2;
         private Label label1;
+        private Button button4;
     }
 }

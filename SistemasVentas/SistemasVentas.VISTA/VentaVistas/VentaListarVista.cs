@@ -1,5 +1,5 @@
 ﻿using SistemasVentas.BSS;
-using SistemasVentas.VISTA.ProveeVistas;
+using SistemasVentas.VISTA.ClienteVistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,6 +29,33 @@ namespace SistemasVentas.VISTA.VentaVistas
             VentaInsertarVista fr = new VentaInsertarVista();
             if (fr.ShowDialog() == DialogResult.OK)
             {
+                dataGridView1.DataSource = bss.ListarVentaBss();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DetalleVentaVistas.DetalleVentaInsertarVista.IdVentaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            DetalleVentaVistas.DetalleVentaEditarVista.IdVentaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int IdSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            VentaEditarVista fr = new VentaEditarVista(IdSeleccionada);
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                dataGridView1.DataSource = bss.ListarVentaBss();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int IdSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            DialogResult result = MessageBox.Show("¿Esta seguro de Eliminar esta Venta?", "Eliminando", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                bss.EliminarVentaBss(IdSeleccionada);
                 dataGridView1.DataSource = bss.ListarVentaBss();
             }
         }
