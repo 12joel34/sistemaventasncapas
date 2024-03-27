@@ -1,7 +1,7 @@
 ﻿using SistemasVentas.BSS;
 using SistemasVentas.Modelos;
-using SistemasVentas.VISTA.MarcaVistas;
 using SistemasVentas.VISTA.TipoProdVistas;
+using SistemasVentas.VISTA.MarcaVistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,7 +25,7 @@ namespace SistemasVentas.VISTA.ProductoVistas
         private void button1_Click(object sender, EventArgs e)
         {
             Producto p = new Producto();
-            p.IdTipoProd = IdTipoProdSeleccionada;
+            p.IdTipoProducto = IdTipoProdSeleccionada;
             p.IdMarca = IdMarcaSeleccionada;
             p.Nombre = textBox1.Text;
             p.CodigoBarra = textBox2.Text;

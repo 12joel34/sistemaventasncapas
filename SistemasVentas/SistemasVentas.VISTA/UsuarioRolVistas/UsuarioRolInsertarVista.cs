@@ -52,7 +52,7 @@ namespace SistemasVentas.VISTA.UsuarioRolVistas
             if (fr.ShowDialog() == DialogResult.OK)
             {
                 Rol rol = bssrol.ObtenerRolIdBss(IdRolSeleccionada);
-                textBox2.Text = rol.Nombre;
+                textBox3.Text = rol.Nombre;
             }
         }
     }

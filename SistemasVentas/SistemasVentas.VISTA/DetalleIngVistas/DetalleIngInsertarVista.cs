@@ -1,5 +1,7 @@
-﻿using SistemasVentas.Modelos;
-using SistemasVentas.BSS;
+﻿using SistemasVentas.BSS;
+using SistemasVentas.Modelos;
+using SistemasVentas.VISTA.ProductoVistas;
+using SistemasVentas.VISTA.IngresoVistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,8 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SistemasVentas.VISTA.IngresoVistas;
-using SistemasVentas.VISTA.ProductoVistas;
+using System.Reflection;
 
 namespace SistemasVentas.VISTA.DetalleIngVistas
 {
@@ -44,7 +45,7 @@ namespace SistemasVentas.VISTA.DetalleIngVistas
             if (fr.ShowDialog() == DialogResult.OK)
             {
                 Ingreso ingreso = bssidingreso.ObtenerIngresoIdBss(IdIngresoSeleccionado);
-                textBox6.Text = Convert.ToString(ingreso.IdIngreso);
+                textBox6.Text = ingreso.IdIngreso.ToString();
             }
         }
 
@@ -58,6 +59,11 @@ namespace SistemasVentas.VISTA.DetalleIngVistas
                 Producto producto = bssidproducto.ObtenerProductoIdBss(IdProductoSeleccionado);
                 textBox5.Text = producto.Nombre;
             }
+        }
+
+        private void DetalleIngInsertarVista_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

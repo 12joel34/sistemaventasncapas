@@ -27,7 +27,7 @@ namespace SistemasVentas.VISTA.TipoProdVistas
             p.Estado = textBox2.Text;
 
             bss.InsertarTipoProdBss(p);
-            MessageBox.Show("Se guardó correctamente a Tipo Prod");
+            MessageBox.Show("Se guardó correctamente a TipoProd");
         }
     }
 }

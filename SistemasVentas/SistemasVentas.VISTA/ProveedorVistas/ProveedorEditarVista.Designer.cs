@@ -75,6 +75,7 @@
             button1.TabIndex = 14;
             button1.Text = "GUARDAR";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // textBox3
             // 
@@ -141,6 +142,7 @@
             Controls.Add(label1);
             Name = "ProveedorEditarVista";
             Text = "ProveedorEditarVista";
+            Load += ProveedorEditarVista_Load;
             ResumeLayout(false);
             PerformLayout();
         }

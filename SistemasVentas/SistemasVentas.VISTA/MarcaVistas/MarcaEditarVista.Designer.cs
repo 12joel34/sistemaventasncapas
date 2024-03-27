@@ -71,6 +71,7 @@
             button1.TabIndex = 8;
             button1.Text = "GUARDAR";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // textBox1
             // 
@@ -101,6 +102,7 @@
             Controls.Add(label1);
             Name = "MarcaEditarVista";
             Text = "MarcaEditarVista";
+            Load += MarcaEditarVista_Load;
             ResumeLayout(false);
             PerformLayout();
         }

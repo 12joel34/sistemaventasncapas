@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SistemasVentas.BSS;
+using SistemasVentas.Modelos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,33 @@ namespace SistemasVentas.VISTA.ProveedorVistas
 {
     public partial class ProveedorEditarVista : Form
     {
-        public ProveedorEditarVista()
+        int idx = 0;
+        Proveedor p = new Proveedor();
+        ProveedorBss bss = new ProveedorBss();
+        public ProveedorEditarVista(int id)
         {
+            idx = id;
             InitializeComponent();
+        }
+
+        private void ProveedorEditarVista_Load(object sender, EventArgs e)
+        {
+            p = bss.ObtenerProveedorIdBss(idx);
+            textBox1.Text = p.Nombre;
+            textBox2.Text = p.Telefono;
+            textBox3.Text = p.Direccion;
+            textBox4.Text = p.Estado;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            p.Nombre = textBox1.Text;
+            p.Telefono = textBox2.Text;
+            p.Direccion = textBox3.Text;
+            p.Estado = textBox4.Text;
+
+            bss.EditarProveedorBss(p);
+            MessageBox.Show("Datos Actualizados");
         }
     }
 }

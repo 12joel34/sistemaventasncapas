@@ -77,6 +77,7 @@
             button3.TabIndex = 2;
             button3.Text = "EDITAR";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
@@ -86,6 +87,7 @@
             button4.TabIndex = 2;
             button4.Text = "ELIMINAR";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // DetalleIngListarVista
             // 

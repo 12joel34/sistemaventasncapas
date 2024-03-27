@@ -78,6 +78,7 @@
             button1.TabIndex = 7;
             button1.Text = "GUARDAR";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label1
             // 
@@ -101,6 +102,7 @@
             Controls.Add(label1);
             Name = "TipoProdEditarVista";
             Text = "TipoProdEditarVista";
+            Load += TipoProdEditarVista_Load;
             ResumeLayout(false);
             PerformLayout();
         }

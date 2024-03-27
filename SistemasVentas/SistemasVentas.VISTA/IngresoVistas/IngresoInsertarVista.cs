@@ -1,5 +1,6 @@
-﻿using SistemasVentas.Modelos;
-using SistemasVentas.BSS;
+﻿using SistemasVentas.BSS;
+using SistemasVentas.Modelos;
+using SistemasVentas.VISTA.PersonaVistas;
 using SistemasVentas.VISTA.ProveedorVistas;
 using System;
 using System.Collections.Generic;
@@ -26,25 +27,30 @@ namespace SistemasVentas.VISTA.IngresoVistas
             Ingreso p = new Ingreso();
             p.IdProveedor = IdProveedorSeleccionada;
             p.FechaIngreso = dateTimePicker1.Value;
-            p.Total = Convert.ToDecimal(textBox2.Text);
+            p.Total = Convert.ToDecimal(textBox1.Text);
 
             bss.InsertarIngresoBss(p);
-            MessageBox.Show("Se guardo correctamente el Ingreso");
+            MessageBox.Show("Se guardó correctamente a Ingreso");
         }
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
         public static int IdProveedorSeleccionada = 0;
-        ProveedorBss bssproveedor = new ProveedorBss();
+        ProveedorBss bssprov = new ProveedorBss();
         private void button3_Click(object sender, EventArgs e)
         {
             ProveedorListarVista fr = new ProveedorListarVista();
             if (fr.ShowDialog() == DialogResult.OK)
             {
-                Proveedor proveedor = bssproveedor.ObtenerProveedorIdBss(IdProveedorSeleccionada);
+                Proveedor proveedor = bssprov.ObtenerProveedorIdBss(IdProveedorSeleccionada);
                 textBox1.Text = proveedor.Nombre;
             }
+        }
+
+        private void IngresoInsertarVista_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

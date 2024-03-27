@@ -67,7 +67,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(146, 270);
+            button1.Location = new Point(124, 219);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 4;
@@ -77,7 +77,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(354, 270);
+            button2.Location = new Point(332, 219);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 5;
@@ -121,7 +121,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(597, 408);
+            ClientSize = new Size(564, 296);
             Controls.Add(label3);
             Controls.Add(textBox1);
             Controls.Add(button3);
@@ -133,6 +133,7 @@
             Controls.Add(label1);
             Name = "IngresoInsertarVista";
             Text = "IngresoInsertarVista";
+            Load += IngresoInsertarVista_Load;
             ResumeLayout(false);
             PerformLayout();
         }

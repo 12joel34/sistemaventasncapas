@@ -58,6 +58,7 @@
             button1.TabIndex = 1;
             button1.Text = "SELECCIONAR";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -67,6 +68,7 @@
             button2.TabIndex = 2;
             button2.Text = "AGREGAR";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -76,6 +78,7 @@
             button3.TabIndex = 2;
             button3.Text = "EDITAR";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
@@ -85,6 +88,7 @@
             button4.TabIndex = 2;
             button4.Text = "ELIMINAR";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // IngresoListarVista
             // 

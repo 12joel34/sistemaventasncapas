@@ -56,6 +56,7 @@
             button4.TabIndex = 29;
             button4.Text = "SELECCIONAR PRODUCTO";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -65,6 +66,7 @@
             button3.TabIndex = 28;
             button3.Text = "SELECCIONAR INGRESO";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // textBox6
             // 
@@ -152,6 +154,7 @@
             button1.TabIndex = 17;
             button1.Text = "GUARDAR";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label5
             // 
@@ -223,6 +226,7 @@
             Controls.Add(label1);
             Name = "DetalleIngEditarVista";
             Text = "DetalleIngEditarVista";
+            Load += DetalleIngEditarVista_Load;
             ResumeLayout(false);
             PerformLayout();
         }

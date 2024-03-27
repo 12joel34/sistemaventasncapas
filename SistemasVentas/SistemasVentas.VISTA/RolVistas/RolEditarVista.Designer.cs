@@ -87,6 +87,7 @@
             button1.TabIndex = 6;
             button1.Text = "GUARDAR";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // RolEditarVista
             // 
@@ -101,6 +102,7 @@
             Controls.Add(button1);
             Name = "RolEditarVista";
             Text = "RolEditarVista";
+            Load += RolEditarVista_Load;
             ResumeLayout(false);
             PerformLayout();
         }

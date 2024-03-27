@@ -19,21 +19,21 @@ namespace SistemasVentas.VISTA.UsuarioVistas
         {
             InitializeComponent();
         }
-        public static int IdPersonaSeleccionada = 0;
-        PersonaBss bss = new PersonaBss();
+
         UsuarioBss bssuser = new UsuarioBss();
         private void button1_Click(object sender, EventArgs e)
         {
-            Usuario usuario = new Usuario();
-            usuario.IdPersona = IdPersonaSeleccionada;
-            usuario.NombreUser = textBox2.Text;
-            usuario.Contraseña = textBox2.Text;
-            usuario.FechaReg = dateTimePicker1.Value;
+            Usuario p = new Usuario();
+            p.IdPersona = IdPersonaSeleccionada;
+            p.NombreUser = textBox2.Text;
+            p.Contraseña = textBox3.Text;
+            p.FechaReg = dateTimePicker1.Value;
 
-            bssuser.InsertarUsuarioBss(usuario);
-            MessageBox.Show("Usuario Registrado");
+            bssuser.InsertarUsuarioBss(p);
+            MessageBox.Show("Se guardó correctamente a Usuario");
         }
-
+        public static int IdPersonaSeleccionada = 0;
+        PersonaBss bss = new PersonaBss();
         private void button3_Click(object sender, EventArgs e)
         {
             PersonaListarVista fr = new PersonaListarVista();

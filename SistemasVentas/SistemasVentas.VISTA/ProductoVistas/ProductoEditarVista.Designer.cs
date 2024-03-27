@@ -86,6 +86,7 @@
             button4.TabIndex = 24;
             button4.Text = "SELECCIONA MARCA";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -95,6 +96,7 @@
             button3.TabIndex = 23;
             button3.Text = "SELECCIONA TIPO PRODUCTO";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -115,6 +117,7 @@
             button1.TabIndex = 21;
             button1.Text = "GUARDAR";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // textBox4
             // 
@@ -203,6 +206,7 @@
             Controls.Add(label1);
             Name = "ProductoEditarVista";
             Text = "ProductoEditarVista";
+            Load += ProductoEditarVista_Load;
             ResumeLayout(false);
             PerformLayout();
         }

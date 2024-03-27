@@ -1,5 +1,5 @@
 ﻿using SistemasVentas.BSS;
-using SistemasVentas.VISTA.ProveedorVistas;
+using SistemasVentas.VISTA.ProductoVistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,6 +36,27 @@ namespace SistemasVentas.VISTA.ProveeVistas
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int IdSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            ProveeEditarVista fr = new ProveeEditarVista(IdSeleccionada);
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                dataGridView1.DataSource = bss.ListarProveeBss();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int IdSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            DialogResult result = MessageBox.Show("¿Esta seguro de Eliminar este Provee?", "Eliminando", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                bss.EliminarProveeBss(IdSeleccionada);
+                dataGridView1.DataSource = bss.ListarProveeBss();
+            }
         }
     }
 }

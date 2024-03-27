@@ -42,7 +42,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(34, 87);
+            label3.Location = new Point(16, 40);
             label3.Name = "label3";
             label3.Size = new Size(162, 15);
             label3.TabIndex = 18;
@@ -50,23 +50,24 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(202, 84);
+            textBox1.Location = new Point(184, 37);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 17;
             // 
             // button3
             // 
-            button3.Location = new Point(320, 84);
+            button3.Location = new Point(302, 37);
             button3.Name = "button3";
             button3.Size = new Size(178, 23);
             button3.TabIndex = 16;
             button3.Text = "SELECCIONA EL PROVEEDOR";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(202, 133);
+            dateTimePicker1.Location = new Point(184, 86);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(246, 23);
             dateTimePicker1.TabIndex = 15;
@@ -74,7 +75,7 @@
             // button2
             // 
             button2.DialogResult = DialogResult.Cancel;
-            button2.Location = new Point(329, 292);
+            button2.Location = new Point(311, 245);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 14;
@@ -84,16 +85,17 @@
             // button1
             // 
             button1.DialogResult = DialogResult.OK;
-            button1.Location = new Point(121, 292);
+            button1.Location = new Point(103, 245);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 13;
             button1.Text = "GUARDAR";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(202, 182);
+            textBox2.Location = new Point(184, 135);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(100, 23);
             textBox2.TabIndex = 12;
@@ -101,7 +103,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(148, 193);
+            label2.Location = new Point(130, 146);
             label2.Name = "label2";
             label2.Size = new Size(39, 15);
             label2.TabIndex = 11;
@@ -110,7 +112,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(92, 140);
+            label1.Location = new Point(74, 93);
             label1.Name = "label1";
             label1.Size = new Size(95, 15);
             label1.TabIndex = 10;
@@ -120,7 +122,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(550, 380);
+            ClientSize = new Size(499, 314);
             Controls.Add(label3);
             Controls.Add(textBox1);
             Controls.Add(button3);
@@ -132,6 +134,7 @@
             Controls.Add(label1);
             Name = "IngresoEditarVista";
             Text = "IngresoEditarVista";
+            Load += IngresoEditarVista_Load;
             ResumeLayout(false);
             PerformLayout();
         }

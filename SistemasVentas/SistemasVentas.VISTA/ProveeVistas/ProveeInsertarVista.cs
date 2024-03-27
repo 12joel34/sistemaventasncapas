@@ -1,5 +1,7 @@
-﻿using SistemasVentas.Modelos;
-using SistemasVentas.BSS;
+﻿using SistemasVentas.BSS;
+using SistemasVentas.Modelos;
+using SistemasVentas.VISTA.ProductoVistas;
+using SistemasVentas.VISTA.ProveedorVistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,8 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using SistemasVentas.VISTA.ProductoVistas;
-using SistemasVentas.VISTA.ProveedorVistas;
+
 
 namespace SistemasVentas.VISTA.ProveeVistas
 {
@@ -44,13 +45,13 @@ namespace SistemasVentas.VISTA.ProveeVistas
             }
         }
         public static int IdProveedorSeleccionada = 0;
-        ProveedorBss bssproveedor = new ProveedorBss();
+        ProveedorBss bssprov = new ProveedorBss();
         private void button4_Click(object sender, EventArgs e)
         {
             ProveedorListarVista fr = new ProveedorListarVista();
             if (fr.ShowDialog() == DialogResult.OK)
             {
-                Proveedor proveedor = bssproveedor.ObtenerProveedorIdBss(IdProveedorSeleccionada);
+                Proveedor proveedor = bssprov.ObtenerProveedorIdBss(IdProveedorSeleccionada);
                 textBox3.Text = proveedor.Nombre;
             }
         }

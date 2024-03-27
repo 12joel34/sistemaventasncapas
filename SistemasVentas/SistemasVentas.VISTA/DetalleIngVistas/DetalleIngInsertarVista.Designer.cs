@@ -224,6 +224,7 @@
             Controls.Add(label1);
             Name = "DetalleIngInsertarVista";
             Text = "DetalleIngInsertarVista";
+            Load += DetalleIngInsertarVista_Load;
             ResumeLayout(false);
             PerformLayout();
         }

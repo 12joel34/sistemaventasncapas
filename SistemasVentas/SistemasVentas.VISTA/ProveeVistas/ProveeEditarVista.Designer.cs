@@ -50,6 +50,7 @@
             button4.TabIndex = 23;
             button4.Text = "SELECCIONA PROVEEDOR";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -59,6 +60,7 @@
             button3.TabIndex = 22;
             button3.Text = "SELECCIONA PRODUCTO";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // textBox3
             // 
@@ -118,6 +120,7 @@
             button1.TabIndex = 15;
             button1.Text = "GUARDAR";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // textBox2
             // 
@@ -163,6 +166,7 @@
             Controls.Add(label1);
             Name = "ProveeEditarVista";
             Text = "ProveeEditarVista";
+            Load += ProveeEditarVista_Load;
             ResumeLayout(false);
             PerformLayout();
         }

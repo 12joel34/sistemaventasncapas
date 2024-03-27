@@ -58,6 +58,7 @@
             button1.TabIndex = 1;
             button1.Text = "SELECCIONAR";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -71,7 +72,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(119, 376);
+            button3.Location = new Point(123, 376);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 2;
@@ -81,7 +82,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(221, 376);
+            button4.Location = new Point(238, 376);
             button4.Name = "button4";
             button4.Size = new Size(75, 23);
             button4.TabIndex = 2;

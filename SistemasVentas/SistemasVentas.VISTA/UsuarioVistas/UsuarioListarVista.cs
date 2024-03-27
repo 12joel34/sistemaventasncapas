@@ -35,12 +35,31 @@ namespace SistemasVentas.VISTA.UsuarioVistas
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            int IdPersonaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            DialogResult result = MessageBox.Show("¿Esta seguro de Eliminar esta Usuario?", "Eliminando", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                bss.EliminarUsuarioBss(IdPersonaSeleccionada);
+                dataGridView1.DataSource = bss.ListarUsuarioBss();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            UsuarioRolVistas.UsuarioRolInsertarVista.IdUsuarioSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            VentaVistas.VentaInsertarVista.IdVendedorSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            UsuarioRolVistas.UsuarioRolEditarVista.IdUsuarioSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            VentaVistas.VentaEditarVista.IdVendedorSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int IdPersonaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            UsuarioEditarVista fr = new UsuarioEditarVista(IdPersonaSeleccionada);
+            if (fr.ShowDialog() == DialogResult.OK)
+            {
+                dataGridView1.DataSource = bss.ListarUsuarioBss();
+            }
         }
     }
 }

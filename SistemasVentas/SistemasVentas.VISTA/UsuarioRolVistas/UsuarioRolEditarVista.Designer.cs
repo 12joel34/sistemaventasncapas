@@ -50,6 +50,7 @@
             button4.TabIndex = 24;
             button4.Text = "SELECCIONA ROL";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -59,6 +60,7 @@
             button3.TabIndex = 23;
             button3.Text = "SELECCIONA USUARIO";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // textBox3
             // 
@@ -134,6 +136,7 @@
             button1.TabIndex = 14;
             button1.Text = "GUARDAR";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label1
             // 
@@ -163,6 +166,7 @@
             Controls.Add(label1);
             Name = "UsuarioRolEditarVista";
             Text = "UsuarioRolEditarVista";
+            Load += UsuarioRolEditarVista_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -100,6 +100,7 @@
             button1.TabIndex = 15;
             button1.Text = "GUARDAR";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label4
             // 
@@ -155,6 +156,7 @@
             Controls.Add(label1);
             Name = "UsuarioEditarVista";
             Text = "UsuarioEditarVista";
+            Load += UsuarioEditarVista_Load;
             ResumeLayout(false);
             PerformLayout();
         }
