@@ -18,7 +18,7 @@ namespace SistemasVentas.DAL
         }
         public void InsertarProductoDal(Producto producto)
         {
-            string consulta = "insert into producto values(" + producto.IdTipoProd + "," +
+            string consulta = "insert into producto values(" + producto.IdTipoProducto + "," +
                                                           "" + producto.IdMarca + "," +
                                                           "'" + producto.Nombre + "'," +
                                                           "'" + producto.CodigoBarra + "'," +
@@ -35,7 +35,7 @@ namespace SistemasVentas.DAL
             if (tabla.Rows.Count > 0)
             {
                 pe.IdProducto = Convert.ToInt32(tabla.Rows[0]["idproducto"]);
-                pe.IdTipoProd = Convert.ToInt32(tabla.Rows[0]["idtipoprod"]);
+                pe.IdTipoProducto = Convert.ToInt32(tabla.Rows[0]["idtipoprod"]);
                 pe.IdMarca = Convert.ToInt32(tabla.Rows[0]["idmarca"]);
                 pe.Nombre = tabla.Rows[0]["nombre"].ToString();
                 pe.CodigoBarra = tabla.Rows[0]["codigobarra"].ToString();
@@ -46,7 +46,7 @@ namespace SistemasVentas.DAL
         }
         public void EditarProductoDal(Producto p)
         {
-            string consulta = "update producto set idtipoprod=" + p.IdTipoProd + "," +
+            string consulta = "update producto set idtipoprod=" + p.IdTipoProducto + "," +
                                                         "idmarca=" + p.IdMarca + "," +
                                                         "nombre='" + p.Nombre + "'," +
                                                         "codigobarra='" + p.CodigoBarra + "'," +
